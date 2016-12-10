@@ -44,7 +44,6 @@
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -118,7 +117,8 @@
     }
 
     #page-content-wrapper {
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         position: relative;
     }
 
@@ -127,3 +127,15 @@
         margin-right: 0;
     }
 }
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+table {
+    table-layout: fixed; 
+    width: 100%; 
+    word-wrap: break-word;
+}
+

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Food Dude - CSCE489</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,30 +34,32 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
+                    <a href="#1">
+                        Food Dude
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a class="page-scroll" href="#1">Video Summary</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    <a class="page-scroll" href="#2">Overview/Motivation</a>
+                    
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <a class="page-scroll" href="#3">Related Work</a>
+                    
                 </li>
                 <li>
-                    <a href="#">Events</a>
+                    <a class="page-scroll" href="#4">Initial Questions</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a class="page-scroll" href="#5">Exploratory Data Analysis</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a class="page-scroll" href="#6">Final Analysis</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a class="page-scroll" href="#7">Appendix: Value Per Gram</a>
                 </li>
             </ul>
         </div>
@@ -66,12 +68,657 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <div class="row">
+                <div id="1" class="row">
                     <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        <h1>Video Summary</h1>
+                        <iframe width="854" height="480" src="https://www.youtube.com/embed/1UqRVAuYYjc" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div id="2" class="row">
+                    <div class="col-lg-12">
+                        <h1>Overview/Motivation</h1>
+                        <p>Howdy! We are Team Dabberlee, and our project is FoodDude. 
+                            Our goal was to explore the different foods on the USDA database and see if there are foods out there that can provide all the necessary nutrients needed by a basic 2000 calorie diet. That is, if a single food could possibly be able to provide all the nutrients a human needs while staying within a reasonable calorie range.</p>
+                        <p>Originally, one of our team members, Kyle Wilson, prepared a data science spotlight about trying to fulfill desired macronutrients for the least amount of money with fast food. We wanted to look more closely at food analysis through nutrients without regard to price. The USDA database provided us with nutrients for many groceries and fast foods, which gave us a nice base to work off of.</p>
+                    </div>
+                </div>
+                <div id="3" class="row">
+                    <div  class="col-lg-12">
+                        <h1>Related Work</h1>
+                        <p>There are already foods out there such as Soylent, which advertises itself as a meal replacement that provides “all the protein, carbohydrates, lipids, and micronutrients that a body needs to thrive.” While Soylent is engineered specifically for this purpose, we wanted to see if there is a food already out there that can provide the same benefits that Soylent can.</p>
+                    </div>
+                </div>
+                <div id="4" class="row">
+                    <div class="col-lg-12">
+                        <h1>Initial Questions</h1>
+                        <li>Is there a food that, if eaten solely, could fulfill all the nutritional requirements of a 2000 calorie diet?</li>
+                        <li>What are the foods that provide all the nutritional value you need for the fewest amount of calories?</li>
+                        <li>What are some overall trends of the best foods?</li>
+                        <li>What are the trends of all the foods that provide you with enough nutrients?</li>
+                    </div>
+                </div>
+                <div id="5" class="row">
+                    <div class="col-lg-12">
+                        <h1>Exploratory Data Analysis</h1>
+                        <p>We got our data from the USDA database, which provided a CSV file that contained many foods that you would find in a grocery store and the nutritional information associated with each item. We then removed the foods that don’t contain all of the nutrients we are looking for and normalized every macronutrient to one calorie. With everything normalized, we scaled the foods up to meet the recommended intake for each nutrient.</p>
+                        <h3>USDA Dietary Recommendations</h3>
+                        <table>
+                            <thead>
+                            <tr>
+                            <th>Nutrient</th>
+                            <th>Unit of Measure</th>
+                            <th>Daily Values</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>Total Fat</td>
+                            <td>grams (g)</td>
+                            <td>65</td>
+                            </tr>
+                            <tr>
+                            <td>Saturated fatty acids</td>
+                            <td>grams (g)</td>
+                            <td>20</td>
+                            </tr>
+                            <tr>
+                            <td>Cholesterol</td>
+                            <td>milligrams (mg)</td>
+                            <td>300</td>
+                            </tr>
+                            <tr>
+                            <td>Sodium</td>
+                            <td>milligrams (mg)</td>
+                            <td>2400</td>
+                            </tr>
+                            <tr>
+                            <td>Potassium</td>
+                            <td>milligrams (mg)</td>
+                            <td>3500</td>
+                            </tr>
+                            <tr>
+                            <td>Total carbohydrate</td>
+                            <td>grams (g)</td>
+                            <td>300</td>
+                            </tr>
+                            <tr>
+                            <td>Fiber</td>
+                            <td>grams (g)</td>
+                            <td>25</td>
+                            </tr>
+                            <tr>
+                            <td>Protein</td>
+                            <td>grams (g)</td>
+                            <td>50</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p></p>
+                        <p>This gave us the number of calories of each food we would need to eat in order to reach the recommended intake for every nutrient. The foods with the lowest caloric intake while still getting all of your nutrients can be seen here</p>
+                        <h3>The Good</h3>
+                        <table >
+                            <thead>
+                                <tr style="text-align: right;">
+                                <th></th>
+                                <th>Name</th>
+                                <th>Calories</th>
+                                <th>Weight (g)</th>
+                                <th>Protein (g)</th>
+                                <th>Total Fat(g)</th>
+                                <th>Cholesterol (mg)</th>
+                                <th>Saturated Fat (g)</th>
+                                <th>Sodium (mg)</th>
+                                <th>Potassium (mg)</th>
+                                <th>Carbohydrates (g)</th>
+                                <th>Fiber (g)</th>
+                                </tr>
+                                <tr>
+                                <th>NDB_No</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th>3127</th>
+                                <td>BABYFOOD,VEG,SPINACH,CRMD,STR</td>
+                                <td>2220.000000</td>
+                                <td>6000.000000</td>
+                                <td>150.000000</td>
+                                <td>78.000000</td>
+                                <td>300.000000</td>
+                                <td>42.120000</td>
+                                <td>2940.000000</td>
+                                <td>11460.000000</td>
+                                <td>342.000000</td>
+                                <td>108.000000</td>
+                                </tr>
+                                <tr>
+                                <th>6082</th>
+                                <td>CAMPBELL'S RED &amp; WHITE,CHICK NOODLEO'S SOUP,COND</td>
+                                <td>2330.808081</td>
+                                <td>3282.828283</td>
+                                <td>78.131313</td>
+                                <td>65.000000</td>
+                                <td>525.252525</td>
+                                <td>26.065657</td>
+                                <td>12507.575758</td>
+                                <td>14083.333333</td>
+                                <td>390.656566</td>
+                                <td>26.262626</td>
+                                </tr>
+                                <tr>
+                                <th>16059</th>
+                                <td>CHILI WITH BEANS,CANNED</td>
+                                <td>2333.836858</td>
+                                <td>2265.861027</td>
+                                <td>138.670695</td>
+                                <td>85.196375</td>
+                                <td>385.196375</td>
+                                <td>25.672205</td>
+                                <td>9584.592145</td>
+                                <td>8270.392749</td>
+                                <td>300.000000</td>
+                                <td>74.773414</td>
+                                </tr>
+                                <tr>
+                                <th>6986</th>
+                                <td>CAMPBELL'S HEALTHY REQUEST,CHICK NOODLE SOUP,COND</td>
+                                <td>2350.000000</td>
+                                <td>5000.000000</td>
+                                <td>120.000000</td>
+                                <td>65.000000</td>
+                                <td>500.000000</td>
+                                <td>20.000000</td>
+                                <td>16700.000000</td>
+                                <td>17500.000000</td>
+                                <td>325.500000</td>
+                                <td>50.000000</td>
+                                </tr>
+                                <tr>
+                                <th>22982</th>
+                                <td>KASHI,STEAM MEAL,CHICK FETTUCCINE,FRZ ENTREE</td>
+                                <td>2383.333333</td>
+                                <td>2407.407407</td>
+                                <td>149.259259</td>
+                                <td>65.000000</td>
+                                <td>337.037037</td>
+                                <td>21.666667</td>
+                                <td>3996.296296</td>
+                                <td>4044.444444</td>
+                                <td>337.037037</td>
+                                <td>48.148148</td>
+                                </tr>
+                                <tr>
+                                <th>11372</th>
+                                <td>POTATOES,SCALLPD,HOME-PREPARED W/BUTTER</td>
+                                <td>2448.979592</td>
+                                <td>2782.931354</td>
+                                <td>79.870130</td>
+                                <td>102.411874</td>
+                                <td>333.951763</td>
+                                <td>62.755102</td>
+                                <td>9322.820037</td>
+                                <td>10519.480519</td>
+                                <td>300.000000</td>
+                                <td>52.875696</td>
+                                </tr>
+                                <tr>
+                                <th>11387</th>
+                                <td>POTATOES,SCALLPD,DRY MIX,PREP W/H2O,WHL MILK&amp;B...</td>
+                                <td>2536.363636</td>
+                                <td>2727.272727</td>
+                                <td>57.818182</td>
+                                <td>117.272727</td>
+                                <td>300.000000</td>
+                                <td>71.809091</td>
+                                <td>9300.000000</td>
+                                <td>5536.363636</td>
+                                <td>348.272727</td>
+                                <td>30.000000</td>
+                                </tr>
+                                <tr>
+                                <th>3296</th>
+                                <td>BABYFOOD,TURKEY,RICE&amp;VEG,TODD</td>
+                                <td>2571.428571</td>
+                                <td>4285.714286</td>
+                                <td>162.857143</td>
+                                <td>68.571429</td>
+                                <td>300.000000</td>
+                                <td>21.428571</td>
+                                <td>7842.857143</td>
+                                <td>4585.714286</td>
+                                <td>321.428571</td>
+                                <td>34.285714</td>
+                                </tr>
+                                <tr>
+                                <th>11385</th>
+                                <td>POTATOES,AU GRATIN,DRY MIX,PREP W/H2O,WHL MILK...</td>
+                                <td>2583.333333</td>
+                                <td>2777.777778</td>
+                                <td>63.888889</td>
+                                <td>114.444444</td>
+                                <td>416.666667</td>
+                                <td>71.833333</td>
+                                <td>12194.444444</td>
+                                <td>6083.333333</td>
+                                <td>356.666667</td>
+                                <td>25.000000</td>
+                                </tr>
+                                <tr>
+                                <th>6434</th>
+                                <td>CAMPBELL'S CHUNKY SOUPS,OLD FASHIONED VEG BF SOUP</td>
+                                <td>2589.430894</td>
+                                <td>5284.552846</td>
+                                <td>166.991870</td>
+                                <td>65.000000</td>
+                                <td>317.073171</td>
+                                <td>21.560976</td>
+                                <td>18284.552846</td>
+                                <td>8613.821138</td>
+                                <td>329.756098</td>
+                                <td>68.699187</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p></p>
+                        <p>As you can see, we have a lot of typical “healthy” foods, such as soups, potatoes, and baby food. Babies often have a very singular diet since they have yet to develop the ability to eat most foods, and it would only make sense that one of the very few foods they eat would contain a good balance of essential nutrients.</p>
+                        <p></p>
+	                    <p>After looking at the data it was hard to judge just how closely these foods stuck to the recommended amount of nutrients, so we converted the raw numbers into their percentage above the recommended daily amount.</p>
+                        <h3>Excess Nutrients</h3>
+                        <img src="img/excess_nutrients.png">
+                        <p>This graph shows that in our so-called “healthy” foods, we have a ton of extra sodium that we don’t need. However, it's important to keep in mind that both sodium and potassium are measured in milligrams and thus, changes to their content have a greater impact on these percentages. Because of this, we decided to take them out.</p>
+                        <h3>Excess Nutrients (Excluding Sodium and Potassium)</h3>
+                        <img src="img/excess_nutrients_nona.png">
+                        <p>What we can see here is that second to sodium and potassium, our best foods have the highest overages in proteins and saturated fats. So while these foods may be great for giving you all the essential nutrients you need, you may get a bit more then you bargained for in the form of sodium, protein, and saturated fats.</p>
+	                    <p>Of course, this project wouldn’t be fun unless we looked at food that was bad for you as well. The same percent overage chart for the bad foods can be seen here.</p>
+                        <h3>The Bad and The Ugly</h3>
+                        <table>
+                            <thead>
+                                <tr style="text-align: right;">
+                                <th></th>
+                                <th>Name</th>
+                                <th>Calories</th>
+                                <th>Weight (g)</th>
+                                <th>Protein (g)</th>
+                                <th>Total Fat(g)</th>
+                                <th>Cholesterol (mg)</th>
+                                <th>Saturated Fat (g)</th>
+                                <th>Sodium (mg)</th>
+                                <th>Potassium (mg)</th>
+                                <th>Carbohydrates (g)</th>
+                                <th>Fiber (g)</th>
+                                </tr>
+                                <tr>
+                                <th>NDB_No</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th>7979</th>
+                                <td>SAUSAGE,PORK,TURKEY,&amp; BF,RED NA</td>
+                                <td>774545.454545</td>
+                                <td>272727.272727</td>
+                                <td>29209.090909</td>
+                                <td>73063.636364</td>
+                                <td>190909.090909</td>
+                                <td>29220.000000</td>
+                                <td>1.851818e+06</td>
+                                <td>654545.454545</td>
+                                <td>300.0</td>
+                                <td>272.727273</td>
+                                </tr>
+                                <tr>
+                                <th>21381</th>
+                                <td>MCDONALD'S,FRUIT 'N YOGURT PARFAIT (WITHOUT GR...</td>
+                                <td>450000.000000</td>
+                                <td>500000.000000</td>
+                                <td>12350.000000</td>
+                                <td>5650.000000</td>
+                                <td>25000.000000</td>
+                                <td>20.000000</td>
+                                <td>1.900000e+05</td>
+                                <td>825000.000000</td>
+                                <td>88350.0</td>
+                                <td>4500.000000</td>
+                                </tr>
+                                <tr>
+                                <th>7939</th>
+                                <td>FRANKFURTER,PORK</td>
+                                <td>288214.285714</td>
+                                <td>107142.857143</td>
+                                <td>13725.000000</td>
+                                <td>25371.428571</td>
+                                <td>70714.285714</td>
+                                <td>9341.785714</td>
+                                <td>8.742857e+05</td>
+                                <td>282857.142857</td>
+                                <td>300.0</td>
+                                <td>107.142857</td>
+                                </tr>
+                                <tr>
+                                <th>19071</th>
+                                <td>CANDIES,CAROB,UNSWTND</td>
+                                <td>162000.000000</td>
+                                <td>30000.000000</td>
+                                <td>2445.000000</td>
+                                <td>9408.000000</td>
+                                <td>300.000000</td>
+                                <td>8705.400000</td>
+                                <td>3.210000e+04</td>
+                                <td>189900.000000</td>
+                                <td>16887.0</td>
+                                <td>1140.000000</td>
+                                </tr>
+                                <tr>
+                                <th>19086</th>
+                                <td>CANDIES,CONFECTIONER'S COATING,PNUT BUTTER</td>
+                                <td>158700.000000</td>
+                                <td>30000.000000</td>
+                                <td>5490.000000</td>
+                                <td>8940.000000</td>
+                                <td>300.000000</td>
+                                <td>3936.000000</td>
+                                <td>7.500000e+04</td>
+                                <td>151500.000000</td>
+                                <td>14064.0</td>
+                                <td>1500.000000</td>
+                                </tr>
+                                <tr>
+                                <th>28196</th>
+                                <td>MOTHER'S,CIRCUS ANIMAL COOKIES</td>
+                                <td>154500.000000</td>
+                                <td>30000.000000</td>
+                                <td>1140.000000</td>
+                                <td>7590.000000</td>
+                                <td>300.000000</td>
+                                <td>7410.000000</td>
+                                <td>5.760000e+04</td>
+                                <td>29400.000000</td>
+                                <td>20490.0</td>
+                                <td>240.000000</td>
+                                </tr>
+                                <tr>
+                                <th>28201</th>
+                                <td>MOTHER'S,HOLIDAY CIRCUS ANIMAL COOKIES</td>
+                                <td>154500.000000</td>
+                                <td>30000.000000</td>
+                                <td>1140.000000</td>
+                                <td>7590.000000</td>
+                                <td>300.000000</td>
+                                <td>7410.000000</td>
+                                <td>5.760000e+04</td>
+                                <td>29400.000000</td>
+                                <td>20490.0</td>
+                                <td>240.000000</td>
+                                </tr>
+                                <tr>
+                                <th>28200</th>
+                                <td>MOTHER'S,HALLOWEEN CIRCUS ANIMALS COOKIES</td>
+                                <td>154200.000000</td>
+                                <td>30000.000000</td>
+                                <td>1140.000000</td>
+                                <td>7590.000000</td>
+                                <td>300.000000</td>
+                                <td>7410.000000</td>
+                                <td>5.730000e+04</td>
+                                <td>29400.000000</td>
+                                <td>20430.0</td>
+                                <td>240.000000</td>
+                                </tr>
+                                <tr>
+                                <th>28204</th>
+                                <td>MOTHER'S,JUNGLE ANIMAL COOKIES</td>
+                                <td>154200.000000</td>
+                                <td>30000.000000</td>
+                                <td>1140.000000</td>
+                                <td>7590.000000</td>
+                                <td>300.000000</td>
+                                <td>7290.000000</td>
+                                <td>5.760000e+04</td>
+                                <td>29400.000000</td>
+                                <td>20490.0</td>
+                                <td>240.000000</td>
+                                </tr>
+                                <tr>
+                                <th>28080</th>
+                                <td>KEEBLER,FUDGE SHOPPE,DELUXE GRAHAMS COOKIES</td>
+                                <td>153300.000000</td>
+                                <td>30000.000000</td>
+                                <td>1200.000000</td>
+                                <td>7740.000000</td>
+                                <td>300.000000</td>
+                                <td>5160.000000</td>
+                                <td>7.950000e+04</td>
+                                <td>80100.000000</td>
+                                <td>19980.0</td>
+                                <td>660.000000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>So for bad foods, we can see that we get a lot of extra saturated fat, sodium, and total fat, not to mention the insane amount of calories that you would need to eat to get all of the calories you need.</p>
+                    </div>
+                </div>
+                <div id="6" class="row">
+                    <div class="col-lg-12">
+                        <h1>Final Analysis</h1>
+                        <p>Several foods could singularly fulfill the nutritional recommendations of a traditional diet. Spinach baby food provides the best balance of nutrients. Considering that the amount that must be eaten to reach 2000 calories is twice as much as that of the other foods, perhaps we should include grams as an additional parameter to draw a more reasonable conclusion (see appendix).<p>
+                        <p>If you're skeptical about reliving the good ol' days with spinach mush, chicken noodle soup, chili and beans, or Kashi chicken fettuccini are great 'superfood' alternatives.</p>
+                        <p>Our 'best foods' tend to be lower in carbohydrates than the worse foods, and have a good balance of nutrients. Sodium levels in the foods tend to be extremely high, which makes sense, as most of them are pre-prepared meals.</p>
+                        <p>On average, foods in the USDA database tend to have more excess fat and sodium than any other nutrient.</p>
+                        <h3>Average Overages</h3>
+                        <img src="img/average_overages.png">
+                        <p>So over our entire data set, we're seeing very high levels of protein, fats and sodium compared to other nutrients. Surprisingly, the lowest average was cholesterol, which indicates that many foods have a healthy proportion of cholesterol overall.</p>
+                    </div>
+                </div>
+                <div id="7" class="row">
+                    <div class="col-lg-12">
+                        <h1>Appendix: Value Per Gram</h1>
+                        <p>Throughout this project, we looked at our food through the lens of calories, but we also had a few interesting findings when we looked at which foods meet nutritional guidelines for the least amount of weight.</p>
+                        <h3>Most Nutritionally Dense Foods</h3>
+                        <table>
+                            <thead>
+                                <tr style="text-align: right;">
+                                <th></th>
+                                <th>Name</th>
+                                <th>Calories</th>
+                                <th>Weight (g)</th>
+                                <th>Protein (g)</th>
+                                <th>Total Fat(g)</th>
+                                <th>Cholesterol (mg)</th>
+                                <th>Saturated Fat (g)</th>
+                                <th>Sodium (mg)</th>
+                                <th>Potassium (mg)</th>
+                                <th>Carbohydrates (g)</th>
+                                <th>Fiber (g)</th>
+                                </tr>
+                                <tr>
+                                <th>NDB_No</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th>11672</th>
+                                <td>POTATO PANCAKES</td>
+                                <td>2891.046386</td>
+                                <td>1078.748652</td>
+                                <td>65.587918</td>
+                                <td>159.223301</td>
+                                <td>1024.811219</td>
+                                <td>26.925566</td>
+                                <td>8241.639698</td>
+                                <td>6709.816613</td>
+                                <td>300.000000</td>
+                                <td>35.598706</td>
+                                </tr>
+                                <tr>
+                                <th>6128</th>
+                                <td>SOUP,CHICK NOODLE,DRY,MIX</td>
+                                <td>4312.091503</td>
+                                <td>1143.790850</td>
+                                <td>176.372549</td>
+                                <td>74.460784</td>
+                                <td>846.405229</td>
+                                <td>22.521242</td>
+                                <td>41668.300654</td>
+                                <td>3500.000000</td>
+                                <td>712.810458</td>
+                                <td>36.601307</td>
+                                </tr>
+                                <tr>
+                                <th>21604</th>
+                                <td>SCHOOL LUNCH,PIZZA,SSAGE TOPPING,THIN CRST,WHL...</td>
+                                <td>3000.000000</td>
+                                <td>1200.000000</td>
+                                <td>151.560000</td>
+                                <td>93.960000</td>
+                                <td>300.000000</td>
+                                <td>41.856000</td>
+                                <td>5484.000000</td>
+                                <td>4620.000000</td>
+                                <td>386.880000</td>
+                                <td>46.800000</td>
+                                </tr>
+                                <tr>
+                                <th>21605</th>
+                                <td>SCHOOL LUNCH,PIZZA,SAUSAGE TOP,THICK CRUST,WHL...</td>
+                                <td>3189.716312</td>
+                                <td>1241.134752</td>
+                                <td>164.574468</td>
+                                <td>112.570922</td>
+                                <td>322.695035</td>
+                                <td>52.363475</td>
+                                <td>5374.113475</td>
+                                <td>3500.000000</td>
+                                <td>379.539007</td>
+                                <td>49.645390</td>
+                                </tr>
+                                <tr>
+                                <th>6959</th>
+                                <td>GRAVY,INST TURKEY,DRY</td>
+                                <td>5112.500000</td>
+                                <td>1250.000000</td>
+                                <td>146.500000</td>
+                                <td>183.250000</td>
+                                <td>300.000000</td>
+                                <td>61.637500</td>
+                                <td>51125.000000</td>
+                                <td>3825.000000</td>
+                                <td>719.500000</td>
+                                <td>47.500000</td>
+                                </tr>
+                                <tr>
+                                <th>21602</th>
+                                <td>SCHOOL LUNCH,PIZZA,PEPPI TOPPING,THIN CRUST,WH...</td>
+                                <td>3175.000000</td>
+                                <td>1250.000000</td>
+                                <td>159.750000</td>
+                                <td>107.750000</td>
+                                <td>300.000000</td>
+                                <td>35.125000</td>
+                                <td>6187.500000</td>
+                                <td>4775.000000</td>
+                                <td>390.500000</td>
+                                <td>53.750000</td>
+                                </tr>
+                                <tr>
+                                <th>21603</th>
+                                <td>SCHOOL LUNCH,PIZZA,PEPP TOPPING,THICK CRUST,WH...</td>
+                                <td>3237.500000</td>
+                                <td>1250.000000</td>
+                                <td>179.375000</td>
+                                <td>122.750000</td>
+                                <td>300.000000</td>
+                                <td>52.737500</td>
+                                <td>5925.000000</td>
+                                <td>3850.000000</td>
+                                <td>353.750000</td>
+                                <td>53.750000</td>
+                                </tr>
+                                <tr>
+                                <th>18300</th>
+                                <td>PANCAKES,WHOLE-WHEAT,DRY MIX,INCOMPLETE,PREP</td>
+                                <td>2609.318996</td>
+                                <td>1254.480287</td>
+                                <td>106.630824</td>
+                                <td>81.541219</td>
+                                <td>765.232975</td>
+                                <td>21.940860</td>
+                                <td>7175.627240</td>
+                                <td>3500.000000</td>
+                                <td>368.817204</td>
+                                <td>35.125448</td>
+                                </tr>
+                                <tr>
+                                <th>43260</th>
+                                <td>BEVERAGE,INST BRKFST PDR,CHOC,SUGAR-FREE,NOT R...</td>
+                                <td>4562.745098</td>
+                                <td>1274.509804</td>
+                                <td>456.274510</td>
+                                <td>65.000000</td>
+                                <td>560.784314</td>
+                                <td>27.554902</td>
+                                <td>9138.235294</td>
+                                <td>21730.392157</td>
+                                <td>522.549020</td>
+                                <td>25.490196</td>
+                                </tr>
+                                <tr>
+                                <th>21478</th>
+                                <td>DIGIORNO PIZZA,PEPPERONI TOPPING,THIN CRISPY C...</td>
+                                <td>3695.895522</td>
+                                <td>1305.970149</td>
+                                <td>172.649254</td>
+                                <td>167.947761</td>
+                                <td>365.671642</td>
+                                <td>64.945896</td>
+                                <td>8658.582090</td>
+                                <td>3500.000000</td>
+                                <td>374.421642</td>
+                                <td>36.567164</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p></p>
+                        <p>There are a lot of pancakes, pizza, and school lunches on the list. To put some of these foods into perspective:
+                        <li>Potato Pancakes: 1078 grams = 49 pancakes</li>
+                        <li>Chicken Noodle Soup: 1143 grams = 15 packets</li>
+                        <li>Digiorno Thin Crust Pizza: 1305 grams = 2.4 Pizzas</li>
+                        </p>
+                        <h3>Excess Nutrients</h3>
+                        <img src="img/appendix_excess.png">
+                        <p>When you look at the percent overages on the foods in the above graph, it's clear that they run into the same problems as most of the foods in our data set with high levels of sodium, protein, and fats. On the whole, the results we get when optimizing by weight exhibit similar characteristics to those found when we optimized by calorie, but reveal a different set of foods that serve a different purpose.</p>
                     </div>
                 </div>
             </div>
@@ -86,6 +733,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- jQuery Easing Plugin (Required For Scroll Script) -->
+    <script src="js/easing.js"></script>
+
+    <!-- Menu Scroll Script -->
+    <script src="js/scroll.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>
