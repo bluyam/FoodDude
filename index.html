@@ -10,6 +10,8 @@
     <meta name="author" content="">
 
     <title>Food Dude - CSCE489</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Francois+One|Molle:400i|Pacifico|Ubuntu" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,32 +36,31 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#1">
-                        Food Dude
-                    </a>
+                    <a id="title">Food Dude</a>
+                    <p id="subtitle">A nutritional analysis of noms</p>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#1">Video Summary</a>
+                    <a class="page-scroll" href="#1">VIDEO SUMMARY</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#2">Overview/Motivation</a>
+                    <a class="page-scroll" href="#2">OVERVIEW & MOTIVATION</a>
                     
                 </li>
                 <li>
-                    <a class="page-scroll" href="#3">Related Work</a>
+                    <a class="page-scroll" href="#3">RELATED WORK</a>
                     
                 </li>
                 <li>
-                    <a class="page-scroll" href="#4">Initial Questions</a>
+                    <a class="page-scroll" href="#4">INITIAL QUESTIONS</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#5">Exploratory Data Analysis</a>
+                    <a class="page-scroll" href="#5">EXPLORATORY DATA ANALYSIS</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#6">Final Analysis</a>
+                    <a class="page-scroll" href="#6">FINAL ANALYSIS</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#7">Appendix: Value Per Gram</a>
+                    <a class="page-scroll" href="#7">APPENDIX: VALUE PER GRAM</a>
                 </li>
             </ul>
         </div>
@@ -70,13 +71,13 @@
             <div class="container-fluid">
                 <div id="1" class="row">
                     <div class="col-lg-12">
-                        <h1>Video Summary</h1>
+                        <h1>VIDEO SUMMARY</h1>
                         <iframe width="100%" height="480" src="https://www.youtube.com/embed/1UqRVAuYYjc" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div id="2" class="row">
                     <div class="col-lg-12">
-                        <h1>Overview/Motivation</h1>
+                        <h1>OVERVIEW & MOTIVATION</h1>
                         <p>Howdy! We are Team Dabberlee, and our project is FoodDude. 
                             Our goal was to explore the different foods on the USDA database and see if there are foods out there that can provide all the necessary nutrients needed by a basic 2000 calorie diet. That is, if a single food could possibly be able to provide all the nutrients a human needs while staying within a reasonable calorie range.</p>
                         <p>Originally, one of our team members, Kyle Wilson, prepared a data science spotlight about trying to fulfill desired macronutrients for the least amount of money with fast food. We wanted to look more closely at food analysis through nutrients without regard to price. The USDA database provided us with nutrients for many groceries and fast foods, which gave us a nice base to work off of.</p>
@@ -84,13 +85,13 @@
                 </div>
                 <div id="3" class="row">
                     <div  class="col-lg-12">
-                        <h1>Related Work</h1>
+                        <h1>RELATED WORK</h1>
                         <p>There are already foods out there such as Soylent, which advertises itself as a meal replacement that provides “all the protein, carbohydrates, lipids, and micronutrients that a body needs to thrive.” While Soylent is engineered specifically for this purpose, we wanted to see if there is a food already out there that can provide the same benefits that Soylent can.</p>
                     </div>
                 </div>
                 <div id="4" class="row">
                     <div class="col-lg-12">
-                        <h1>Initial Questions</h1>
+                        <h1>INITIAL QUESTIONS</h1>
                         <li>Is there a food that, if eaten solely, could fulfill all the nutritional requirements of a 2000 calorie diet?</li>
                         <li>What are the foods that provide all the nutritional value you need for the fewest amount of calories?</li>
                         <li>What are some overall trends of the best foods?</li>
@@ -99,7 +100,7 @@
                 </div>
                 <div id="5" class="row">
                     <div class="col-lg-12">
-                        <h1>Exploratory Data Analysis</h1>
+                        <h1>EXPLORATORY DATA ANALYSIS</h1>
                         <p>We got our data from the USDA database, which provided a CSV file that contained many foods that you would find in a grocery store and the nutritional information associated with each item. We then removed the foods that don’t contain all of the nutrients we are looking for and normalized every macronutrient to one calorie. With everything normalized, we scaled the foods up to meet the recommended intake for each nutrient.</p>
                         <h3>USDA Dietary Recommendations</h3>
                         <table>
@@ -521,7 +522,7 @@
                 </div>
                 <div id="6" class="row">
                     <div class="col-lg-12">
-                        <h1>Final Analysis</h1>
+                        <h1>FINAL ANALYSIS</h1>
                         <p>Several foods could singularly fulfill the nutritional recommendations of a traditional diet. Spinach baby food provides the best balance of nutrients. Considering that the amount that must be eaten to reach 2000 calories is twice as much as that of the other foods, perhaps we should include grams as an additional parameter to draw a more reasonable conclusion (see appendix).<p>
                         <p>If you're skeptical about reliving the good ol' days with spinach mush, chicken noodle soup, chili and beans, or Kashi chicken fettuccini are great 'superfood' alternatives.</p>
                         <p>Our 'best foods' tend to be lower in carbohydrates than the worse foods, and have a good balance of nutrients. Sodium levels in the foods tend to be extremely high, which makes sense, as most of them are pre-prepared meals.</p>
@@ -533,7 +534,7 @@
                 </div>
                 <div id="7" class="row">
                     <div class="col-lg-12">
-                        <h1>Appendix: Value Per Gram</h1>
+                        <h1>APPENDIX: VALUE PER GRAM</h1>
                         <p>Throughout this project, we looked at our food through the lens of calories, but we also had a few interesting findings when we looked at which foods meet nutritional guidelines for the least amount of weight.</p>
                         <h3>Most Nutritionally Dense Foods</h3>
                         <table>
