@@ -146,6 +146,7 @@ table {
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
 }
 
 #title {
@@ -163,3 +164,7 @@ h1 {
     font-family: 'Francois One', sans-serif;
 }
 
+h3 {
+    font-family: 'Francois One', bold;
+}
+ 
